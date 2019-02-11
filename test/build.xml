@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
 <project default="compile">
   	<property name="src.java.dir" location="./src/main/java/converter"/>
    	<property name="src.test.dir" location="./src/main/test"/>
