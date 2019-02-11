@@ -4,18 +4,18 @@
   	<property name="src.java.dir" location="./src/main/java/converter"/>
    	<property name="src.test.dir" location="./src/main/test"/>
     <property name="result.dir" location="./target"/>
-   	<property name="result.javaclasses.dir" location="./src/main/test"/>
+   	<property name="result.javaclasses.dir" location="./src/main/classes"/>
    	<property name="result.testclases.dir" location=".src/main/testclasses"/>
    	<property name="result.jar.file" location="./MyProduct.jar"/>
    
   	<target name="compile">
         <mkdir dir="./src/main/java/converter"/>
-         <javac srcdir="./src/main/java/converter" destdir="./src/main/test" debug="true" includeantruntime="false">
+         <javac srcdir="./src/main/java/converter" destdir="./src/main/calsses" debug="true" includeantruntime="false">
          </javac>
     </target>	
               	<target name="jar" depends="compile">
               	<jar destfile="./MyProduct.jar">
-              	<fileset dir="./src/main/test">
+              	<fileset dir="./src/main/classes">
               		</fileset>
               		</jar>
               	</target>
