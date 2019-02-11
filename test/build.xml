@@ -5,7 +5,7 @@
    	<property name="src.test.dir" location="./src/main/test"/>
     <property name="result.dir" location="./target"/>
    	<property name="result.javaclasses.dir" location="./src/main/classes"/>
-   	<property name="result.testclases.dir" location=".src/main/testclasses"/>
+   	<property name="result.testclases.dir" location="./src/main/testclasses"/>
    	<property name="result.jar.file" location="./MyProduct.jar"/>
    
   	<target name="compile">
