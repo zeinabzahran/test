@@ -4,18 +4,18 @@
   	<property name="src.java.dir" location="./src/main/java/converter"/>
    	<property name="src.test.dir" location="./src/main/test"/>
     <property name="result.dir" location="./target"/>
-   	<property name="result.javaclasses.dir" location="C:\Program Files (x86)\Jenkins\workspace\Test\src\main\classes"/>
+   	<property name="result.javaclasses.dir" location=""/>
    	<property name="result.testclases.dir" location="./src/main/testclasses"/>
    	<property name="result.jar.file" location="./MyProduct.jar"/>
    
   	<target name="compile">
         <mkdir dir="./src/main/java/converter"/>
-         <javac srcdir="./src/main/java/converter" destdir="C:\Program Files (x86)\Jenkins\workspace\Test\src\main\classes" debug="true" includeantruntime="false">
+         <javac srcdir="./src/main/java/converter" destdir="" debug="true" includeantruntime="false">
          </javac>
     </target>	
               	<target name="jar" depends="compile">
               	<jar destfile="./MyProduct.jar">
-              	<fileset dir="C:\Program Files (x86)\Jenkins\workspace\Test\src\main\classes">
+              	<fileset dir="">
               		</fileset>
               		</jar>
               	</target>
