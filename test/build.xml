@@ -3,11 +3,18 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="test">
+              as the first entry and export the buildfile again. -->
+<project default="compile" name="test">
     <property environment="env"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
+  	<property name="src.java.dir" location="./src/main/java/converter"/>
+   	<property name="src.test.dir" location="./src/main/test"/>
+    <property name="result.dir" location="./target"/>
+   	<property name="result.javaclasses.dir" location="${result.dir}/classes"/>
+   	<property name="result.testclases.dir" location="${result.dir}/testclasses"/>
+   	<property name="result.jar.file" location="./MyProduct.jar"/>
     <path id="test.classpath">
         <pathelement location="bin"/>
     </path>
@@ -51,4 +58,16 @@
             <classpath refid="test.classpath"/>
         </java>
     </target>
+  	<target name="compile">
+        <mkdir dir="${result.javaclasses.dir}"/>
+         <javac srcdir="${src.java.dir}" destdir="${result.javaclasses.dir}"
+         	debug="true" includeantruntime="false">
+         </javac>
+    </target>	
+              	<target name="jar" depends="compile">
+              	<jar destfile="${result.jar.file}">
+              	<fileset dir="${result.javaclasses.dir}">
+              		</fileset>
+              		</jar>
+              	</target>
 </project>
