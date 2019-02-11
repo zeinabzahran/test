@@ -1,23 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project default="compile" name="test">
+<project default="compile">
   	<property name="src.java.dir" location="./src/main/java/converter"/>
    	<property name="src.test.dir" location="./src/main/test"/>
     <property name="result.dir" location="./target"/>
-   	<property name="result.javaclasses.dir" location="${result.dir}/classes"/>
-   	<property name="result.testclases.dir" location="${result.dir}/testclasses"/>
+   	<property name="result.javaclasses.dir" location=".src/main/classes"/>
+   	<property name="result.testclases.dir" location=".src/main/testclasses"/>
    	<property name="result.jar.file" location="./MyProduct.jar"/>
    
-    
-    
   	<target name="compile">
-        <mkdir dir="${result.javaclasses.dir}"/>
-         <javac srcdir="${src.java.dir}" destdir="${result.javaclasses.dir}"
+        <mkdir dir="./src/main/java/converter"/>
+         <javac srcdir="./src/main/java/converter" destdir=".src/main/classes""
          	debug="true" includeantruntime="false">
          </javac>
     </target>	
               	<target name="jar" depends="compile">
-              	<jar destfile="${result.jar.file}">
-              	<fileset dir="${result.javaclasses.dir}">
+              	<jar destfile="./MyProduct.jar">
+              	<fileset dir=".src/main/classes">
               		</fileset>
               		</jar>
               	</target>
