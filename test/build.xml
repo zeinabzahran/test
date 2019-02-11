@@ -10,12 +10,12 @@
    
   	<target name="compile">
         <mkdir dir="./src/main/java/converter"/>
-         <javac srcdir="./src/main/java/converter" destdir="./src/main/calsses" debug="true" includeantruntime="false">
+         <javac srcdir="./src/main/java/converter" destdir="E:\Software\apache-ant-1.10.5\bin" debug="true" includeantruntime="false">
          </javac>
     </target>	
               	<target name="jar" depends="compile">
               	<jar destfile="./MyProduct.jar">
-              	<fileset dir="./src/main/classes">
+              	<fileset dir="E:\Software\apache-ant-1.10.5\bin">
               		</fileset>
               		</jar>
               	</target>
