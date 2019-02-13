@@ -2,9 +2,9 @@
 <project default="compile">
   	<property name="src.java.dir" location="./src"/>
    	<property name="src.test.dir" location="./src"/>
-    <property name="result.dir" location="./src"/>
+    <property name="result.dir" location="./target"/>
    	<property name="result.javaclasses.dir" location="${result.dir}/classes"/>
-   	<property name="result.testclases.dir" location="${result.dir}/testclasses"/>
+   	<property name="result.testclasses.dir" location="${result.dir}/testclasses"/>
    	<property name="result.jar.file" location="./MyProduct.jar"/>
    
   	<target name="compile">
@@ -13,7 +13,7 @@
          </javac>
     </target>	
               	<target name="jar" depends="compile">
-              	<jar destfile="${result.jar.dir}">
+              	<jar destfile="${result.jar.file}">
               	<fileset dir="${result.javaclasses.dir}">
               		</fileset>
               		</jar>
