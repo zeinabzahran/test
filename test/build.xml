@@ -1,10 +1,8 @@
 
 <project default="compile">
-  	<property name="src.java.dir" location="./src/main/classes"/>
-   	<property name="src.test.dir" location="./src/main/classes"/>
+  	<property name="src.java.dir" location="./ws/test/src/test/"/>
     <property name="result.dir" location="./src/main/classes"/>
-   	<property name="result.javaclasses.dir" location="./src/main/classes"/>
-   	<property name="result.testclasses.dir" location="./src/main/testclasses"/>
+   	<property name="result.javaclasses.dir" location="${result.dir}/classes"/>
    	<property name="result.jar.file" location="./MyProduct.jar"/>
    
   	<target name="compile">
