@@ -1,8 +1,8 @@
 
 <project default="compile">
-  	<property name="src.java.dir" location="./src/main/java/converter"/>
+  	<property name="src.java.dir" location="./src"/>
    	<property name="src.test.dir" location="./src"/>
-    <property name="result.dir" location="./target"/>
+    <property name="result.dir" location="./src"/>
    	<property name="result.javaclasses.dir" location="${result.dir}/classes"/>
    	<property name="result.testclases.dir" location="${result.dir}/testclasses"/>
    	<property name="result.jar.file" location="./MyProduct.jar"/>
